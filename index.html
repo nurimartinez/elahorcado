@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="img/favicon.png" rel="icon">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>Ahorcado</title>
+</head>
+<body>
+  <!--Simbolo de carga-->
+  <div class="cargando"></div>
+
+  <!-- Sonidos-->
+  <audio id="musica" src="audio/musica.mp3" loop autoplay></audio>
+
+  <!--Pantalla principal-->
+  <header class="cabecera">
+    <nav class="cabecera-menu">
+      <img src="img/inicio.png" alt="Inicio" class="cabecera-menu-inicio">
+      <img src="img/puntuacion.png" alt="Puntuación" class="cabecera-menu-puntuacion">
+    </nav>
+  </header>
+  <main class="juego">
+    <div class="juego-temporizador">00:00</div>
+    <h2 class="juego-tematica">Temática</h2>
+    <img src="img/ahorcado0.png" alt="Ahorcado" class="juego-ahorcado">
+    <div class="juego-palabra"></div>
+    <div class="juego-teclado"></div>
+    <div class="juego-datos"> 
+      <p class="juego-datos-nombre">Player</p>
+      <p class="juego-datos-partidas">Partidas ganadas: 0</p>
+    </div>
+  </main>
+  <footer class="pie">
+    <p>Este juego ha sido creado por <a href="https://infinito.estelock.repl.co/" target="blank">Infinito ∞</a></p>
+  </footer>
+  
+  <!--Modal inicio-->
+  <div class="modal-inicio">
+    <div class="modal-inicio-imagenes">
+      <img src="img/intro.png" alt="Logo" class="modal-inicio-imagen">
+      <form class="modal-inicio-formulario">
+        <label for="nombre">Introduce tu nombre:</label>
+        <input type="text" id="nombre" placeholder="Player" autofocus>
+        <div class="modal-inicio-formulario-alerta oculto">
+          <p>Debes introducir tu nombre</p>
+        </div>
+      </form>
+      <img src="img/jugar.png" alt="Jugar" class="modal-inicio-jugar">
+    </div>
+  </div>
+
+  <!--Modal nivel y temática-->
+  <div class="modal-opciones oculto">
+    <div class="modal-opciones-tematica">
+      <img src="#" alt="tema1" class="tematica-boton">
+    </div>
+    <div class="modal-opciones-nivel">
+      <img src="#" alt="Fácil" class="nivel-boton">
+      <img src="#" alt="Medio" class="nivel-boton">
+      <img src="#" alt="Difícil" class="nivel-boton">
+    </div>
+    <img src="img/jugar.png" alt="Jugar" class="modal-opciones-jugar">
+  </div>
+
+  <!--Modal perder-->
+  <div class="modal-fin oculto">
+    <div class="modal-fin-imagenes">
+      <img src="img/perder.png" alt="Logo" class="modal-fin-imagen">
+      <img src="img/rejugar.png" alt="Volver a jugar" class="modal-fin-rejugar">
+    </div>
+  </div>
+
+  <!--Modal puntuación-->
+  <div class="modal-puntuacion oculto">
+    <div class="modal-puntuacion-marcador">
+      <img src="img/salir.png" alt="Salir" class="marcador-salir">
+      <h2 class="marcador-titulo">Puntuaciones</h2>
+      <div class="marcador-titulos">
+        <p>NOMBRE</p>
+        <p>PUNTUACIÓN</p>
+      </div>
+      <div class="marcador-listado">
+        <div class="marcador-listado-fila">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--JavaScript-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
